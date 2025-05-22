@@ -12,13 +12,23 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <script>
+  // Disable right-click
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+  });
+
+  // Disable F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U
   document.addEventListener("keydown", function (e) {
-    if (e.key === "F12" || e.keyCode === 123) {
+    if (
+      e.keyCode === 123 || // F12
+      (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J')) || // Ctrl+Shift+I/J
+      (e.ctrlKey && e.key === 'U') // Ctrl+U
+    ) {
       e.preventDefault();
-      return false;
     }
   });
 </script>
+
 
 
 <script src="https://cdn.lordicon.com/lordicon.js"></script>  
