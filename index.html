@@ -11,6 +11,15 @@
     <link rel="icon" type= "image/jpg" href= "code.png">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<script>
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "F12" || e.keyCode === 123) {
+      e.preventDefault();
+      alert("F12 is disabled on this site.");
+      return false;
+    }
+  });
+</script>
 
 
 <script src="https://cdn.lordicon.com/lordicon.js"></script>  
